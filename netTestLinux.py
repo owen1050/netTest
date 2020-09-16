@@ -23,7 +23,7 @@ while True:
    # print(a)
     
     pings = pings + 1
-    i2 = a.find("=")
+    i2 = a.find(" = ")
     i0 = a.find("/", i2) + 1
     i1 = a.find("/", i0)
     print(i2, i0, i1)

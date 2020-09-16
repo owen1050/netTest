@@ -19711,3 +19711,5 @@ failure
 failure
 failure
 failure
+time:1600225508.637583	IP:8.8.8.8	totalPings:100	avgPing:3.9	maxPing:4.726	last10Avg:3.9	last10Max:4.726	pingsOver100:0	percentageOfPingsOver100:0.0%	timeout:0	packetLoss:0.0%
+time:1600225510.2845757	IP:8.8.8.8	totalPings:200	avgPing:3.9	maxPing:4.726	last10Avg:3.9	last10Max:4.623	pingsOver100:0	percentageOfPingsOver100:0.0%	timeout:0	packetLoss:0.0%
