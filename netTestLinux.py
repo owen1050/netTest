@@ -26,7 +26,8 @@ while True:
     i2 = a.find("=")
     i0 = a.find("/", i2) + 1
     i1 = a.find("/", i0)
-    cp = int(a[i0:i1])
+    print(i2, i0, i1)
+    cp = float(a[i0:i1])
     totalPing = totalPing + cp
 
     if cp > 100:
