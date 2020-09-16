@@ -1,4 +1,4 @@
-import subprocess, time
+import os, subprocess, time
 
 file = "9162020BuslerHome.txt"
 pings = 0
@@ -16,16 +16,19 @@ pingsOver100 = 0
 while True:
     time.sleep(0.01)
     try:
-    
-        a = str(subprocess.run("ping -n 1 " + ip, stdout=subprocess.PIPE, stderr=subprocess.PIPE))
+        stream = os.popen("ping -c 1 8.8.8.8")
+        a = stream.read()
+
+       #a = str(subprocess.run("ping -n 1 " + ip, stdout=subprocess.PIPE, stderr=subprocess.PIPE))
        # print(a)
         if a.find("timed out") > 0:
             timeout = timeout + 1
             print("timeout")
         else:
             pings = pings + 1
-            i0 = a.find("time=") + 5
-            i1 = a.find("ms", i0)
+            i2 = a.find("=")
+            i0 = a.find("/", i2) + 1
+            i1 = a.find("/", i0)
             cp = int(a[i0:i1])
             totalPing = totalPing + cp
 
